@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="container" style="border: 3px solid black;margin-top: 3%;">
+    <h1 style="font-size: 75px;font-weight: bolder;color: black;">Tus Productos</h1>
+  <div class="row" style="padding-bottom: 3%;">
+    <div class="col-4" *ngFor="let producto of productos">
+        <div class="card" style="width: 18rem;max-width: 100%;">
+            <img src="{{producto.imagenes[0]}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{producto.nombre}}</h5>
+              <p class="card-text">{{producto.descripcion}}</p>
+              <h5 class="card-title">$ {{producto.precio}}</h5>
+              <div class="row">
+                <div class="col-6">
+                    <a class="btn btn-primary" (click)="obtener(producto.id)" style="width: 100%;">Editar</a>
+                </div>
+                <div class="col-6">
+                    <a class="btn btn-danger" (click)="eliminar(producto.id)" style="width: 100%;">Eliminar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="container" *ngIf="mostrarEditor">
+            <div class="container" style="margin-bottom: 3%;">
+              <h1 style="font-size: 75px;font-weight: bolder;color: black;">Editar Producto</h1>
+              <input type="text" class="form-control" placeholder="Nombre" id="saltar" [(ngModel)]="nombreproducto">
+              <input type="number" class="form-control" placeholder="Precio" id="saltar" [(ngModel)]="precioproducto">
+              <textarea class="form-control" rows="3" id="saltar" placeholder="Ingrese una descripcion de su producto" [(ngModel)]="descripcionproducto"></textarea>
+              <input type="text" class="form-control" id="saltar" placeholder="Ingrese URL's separados por coma" [(ngModel)]="linkImagen">
+              <button class="btn btn-success" id="saltar" style="border: solid 3px black; width: 100%; font-size: xx-large; font-weight: bolder;" (click)="editar()">Guardar Cambios</button>
+            </div>
+        </div>
+        <button class="btn btn-success" id="saltar" style="border: solid 3px black; width: 100%; font-size: xx-large; font-weight: bolder;" routerLink="/landingpage/{{idusuario}}">Volver</button>
+    </div>
+</div>
+<app-footer></app-footer>

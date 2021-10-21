@@ -1,0 +1,14 @@
+.container-fluid{
+	/*max-width: 1140px;*/
+	/*margin: 0 auto;*/
+}
+a {
+	color: black;
+	font-size: small;
+	text-decoration: none;
+  }
+#Logo
+{
+    width: 12%;
+    height: 12%;
+}

@@ -1,0 +1,30 @@
+<div class="wrapper">
+	<div class="container" style="border: solid 5px black; background:rgba(255,255,255, 0.10);">
+		<h1 style="font-weight:600;">¡Bienvenido!</h1>
+		
+		<form class="form" action="landingpage">
+			<input type="text" placeholder="Usuario" class="form-control" [(ngModel)]="user" [ngModelOptions]="{standalone: true}">
+			<input type="password" placeholder="Contraseña" class="form-control" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+			<button type="submit" id="login-button" (click)="login()" >Iniciar Sesion</button>
+		</form>
+		<h4 style="font-weight:600; color: black; padding-bottom: 1%;">¿No tienes una cuenta?</h4>
+		<button type="button" class="btn btn-secondary btn-lg" (click)="crearcuenta()" style="border: 3px solid black;">¡Crear Aqui!</button>
+	</div>
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>

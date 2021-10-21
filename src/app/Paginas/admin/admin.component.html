@@ -1,0 +1,54 @@
+<app-header></app-header>
+<div class="container" style="font-weight: bold;font-size: large;">
+    <div class="row">
+        <div class="col">
+        <h2 style="text-align: center;">Administrador</h2>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container" style="background-color: rgba(255, 255, 255,0.5); border: solid 5px black;">
+        <h2>Lista de usuarios</h2>
+        <br>
+        <div class="row">
+            <div class="col-8">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre Completo</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Contraseña</th>
+                        <th scope="col">Editar</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let usuario of usuarios">
+                      <tr>
+                        <th scope="row">{{usuario.id}}</th>
+                        <th scope="row">{{usuario.nombre + " "+ usuario.apellido}}</th> 
+                        <th scope="row">{{usuario.usuario}}</th>
+                        <th scope="row">**********</th>
+                        <th scope="row"><button class="btn btn-primary" style="border:solid 3px black" (click)="obtener(usuario.id)">Editar Usuario</button></th>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4">
+              <div class="container">
+                <h2>Borrar por ID</h2>
+                <input type="text" [(ngModel)] ="ideliminar" class="form-control" placeholder="Ingrese ID" style="margin-bottom: 1%;">
+                <button class="btn btn-danger" style="border: solid 3px black; width: 100%;" (click)="eliminar()">Borrar Usuario</button>
+              </div>
+              <div class="container" *ngIf="mostrarEditor">
+                <div class="container" style="margin-bottom: 3%;">
+                  <h1>Editar Usuario</h1>
+                  <input type="text" class="form-control" placeholder="Nombre Completo" style="margin-bottom: 1%;" [(ngModel)]="nombreeditado">
+                  <input type="text" class="form-control" placeholder="Contraseña" style="margin-bottom: 1%;"[(ngModel)]="contraseniaeditada">
+                  <button class="btn btn-danger" style="border: solid 3px black; width: 100%;" (click)="editar()">Guardar Cambios</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+</div>
+<app-footer></app-footer>

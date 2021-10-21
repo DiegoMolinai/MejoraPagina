@@ -1,0 +1,362 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row" style="padding: 3%">
+    <div class="col-12" style="border: 3px solid black">
+      <div class="row" style="padding-bottom: 3%">
+        <h1 style="color: black">Todos Los Productos</h1>
+
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card d-block mx-auto" style="width: 18rem">
+                <img
+                  src="https://pics.freeicons.io/uploads/icons/png/9331428851544610487-512.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <div class="carousel-item" *ngFor="let producto of productos">
+              <div
+                class="card mb-3"
+                style="margin-left: 10%; margin-right: 10%"
+              >
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="{{ producto.imagenes }}"
+                      alt="..."
+                      style="width: 100%; margin: auto"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body" style="font-weight: bold">
+                      <h1 class="card-title" style="font-size: 40px">
+                        {{ producto.nombre }}
+                      </h1>
+                      <p class="card-text" style="font-size: 20px">
+                        {{ producto.descripcion }}
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-2"
+                    style="
+                      margin: auto;
+                      font-size: xx-large;
+                      font-weight: bolder;
+                    "
+                  >
+                    <div class="container">
+                      <p class="card-text">$ {{ producto.precio }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row" style="padding: 3%">
+      <div class="col-12" style="border: 3px solid black">
+        <div class="row" style="padding-bottom: 3%">
+          <h1 style="color: black">Intercambios Pendientes</h1>
+          <!-- 3D Slideshow Section -->
+          <section id="slideshow">
+            <div class="entire-content">
+              <div class="content-carrousel">
+                <figure class="shadow" *ngFor="let producto of productos" style="background: url({{producto.imagenes[0]}});">
+                  <div class="row g-0" style="background: RGBA(0,0,0,0.41);">
+                    <div class="col">
+                      <div class="card-body" style="font-weight: bold;">
+                        <h1 class="card-title" style="font-size: 100%;color: white;">
+                          {{ producto.nombre }}
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+                
+              </div>
+            </div>
+          </section>
+          <!-- <div id="Carousel2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#Carousel1"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#Carousel1"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#Carousel1"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-4">
+                    <div
+                      class="card mb-3"
+                      style="margin-left: 10%; margin-right: 10%"
+                    >
+                      <div class="row g-0">
+                        <div class="col-md-6">
+                          <img
+                            src="{{ productos[0].imagenes }}"
+                            alt="..."
+                            style="width: 100%; margin: auto"
+                          />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card-body" style="font-weight: bold">
+                            <h1 class="card-title" style="font-size: 40px">
+                              {{ productos[0].nombre }}
+                            </h1>
+                            <p class="card-text" style="font-size: 20px">
+                              {{ productos[0].descripcion }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div
+                      class="card mb-3"
+                      style="margin-left: 10%; margin-right: 10%"
+                    >
+                      <div class="row g-0">
+                        <div class="col-md-6">
+                          <img
+                            src="{{ productos[1].imagenes }}"
+                            alt="..."
+                            style="width: 100%; margin: auto"
+                          />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card-body" style="font-weight: bold">
+                            <h1 class="card-title" style="font-size: 40px">
+                              {{ productos[1].nombre }}
+                            </h1>
+                            <p class="card-text" style="font-size: 20px">
+                              {{ productos[1].descripcion }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div
+                      class="card mb-3"
+                      style="margin-left: 10%; margin-right: 10%"
+                    >
+                      <div class="row g-0">
+                        <div class="col-md-6">
+                          <img
+                            src="{{ productos[2].imagenes }}"
+                            alt="..."
+                            style="width: 100%; margin: auto"
+                          />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card-body" style="font-weight: bold">
+                            <h1 class="card-title" style="font-size: 40px">
+                              {{ productos[2].nombre }}
+                            </h1>
+                            <p class="card-text" style="font-size: 20px">
+                              {{ productos[2].descripcion }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" *ngFor="let producto of productos">
+                <div class="row">
+                  <div class="col-4">
+                    <div
+                      class="card mb-3"
+                      style="margin-left: 10%; margin-right: 10%"
+                    >
+                      <div class="row g-0">
+                        <div class="col-md-6">
+                          <img
+                            src="{{ producto.imagenes }}"
+                            alt="..."
+                            style="width: 100%; margin: auto"
+                          />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card-body" style="font-weight: bold">
+                            <h1 class="card-title" style="font-size: 40px">
+                              {{ producto.nombre }}
+                            </h1>
+                            <p class="card-text" style="font-size: 20px">
+                              {{ producto.descripcion }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div
+                      class="card mb-3"
+                      style="margin-left: 10%; margin-right: 10%"
+                    >
+                      <div class="row g-0">
+                        <div class="col-md-6">
+                          <img
+                            src="{{ producto.imagenes }}"
+                            alt="..."
+                            style="width: 100%; margin: auto"
+                          />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card-body" style="font-weight: bold">
+                            <h1 class="card-title" style="font-size: 40px">
+                              {{ producto.nombre }}
+                            </h1>
+                            <p class="card-text" style="font-size: 20px">
+                              {{ producto.descripcion }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div
+                      class="card mb-3"
+                      style="margin-left: 10%; margin-right: 10%"
+                    >
+                      <div class="row g-0">
+                        <div class="col-md-6">
+                          <img
+                            src="{{ producto.imagenes }}"
+                            alt="..."
+                            style="width: 100%; margin: auto"
+                          />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card-body" style="font-weight: bold">
+                            <h1 class="card-title" style="font-size: 40px">
+                              {{ producto.nombre }}
+                            </h1>
+                            <p class="card-text" style="font-size: 20px">
+                              {{ producto.descripcion }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#Carousel2"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#Carousel2"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Botones de crear y ver productos -->
+  <div id="contenedor" class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button
+            class="btn btn-primary"
+            type="button"
+            routerLink="/crearproducto/{{ idusuario }}"
+          >
+            Crear Producto
+          </button>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button
+            class="btn btn-primary"
+            type="button"
+            routerLink="/usuario/{{ idusuario }}"
+          >
+            Ver mis productos
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <app-footer></app-footer>
+</div>

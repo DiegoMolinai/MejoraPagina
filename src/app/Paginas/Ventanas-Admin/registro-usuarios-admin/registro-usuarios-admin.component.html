@@ -1,0 +1,59 @@
+<app-header></app-header>
+    <div class="container">
+        <h1 style="font-size:50px; text-align: center;padding:3%; color:white;">Registro De Usuario</h1>
+    </div>
+    <div id="contenedor" class="container">
+        <div class="row" style="padding-top:2%;">
+            <div class="col-8">
+                <div class="form-floating mb-3">
+                    <input type="user" class="form-control" [(ngModel)] ="nombre" id="nombre" placeholder="Usuario123">
+                    <label for="floatingInput">Nombre:</label>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="form-floating mb-3">
+                    <input type="user" class="form-control" [(ngModel)]="pais" id="pais" placeholder="Usuario123">
+                    <label for="floatingInput">Correo:</label>
+                  </div>
+            </div>
+        </div>
+        <div class="row" style="padding-top:2%;">
+            <div class="col-4">
+                <div class="form-floating mb-3">
+                    <input type="user" class="form-control" [(ngModel)]="usuario" id="usuario" placeholder="Usuario123">
+                    <label for="floatingInput">Usuario:</label>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="form-floating mb-3">
+                    <input type="user" class="form-control" [(ngModel)]="contrasena" id="contrasena" placeholder="Usuario123">
+                    <label for="floatingInput">Telefono:</label>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="form-floating mb-3">
+                    <input type="user" class="form-control" [(ngModel)]="ciudad" id="ciudad" placeholder="Usuario123">
+                    <label for="floatingInput">Ciudad:</label>
+                  </div>
+            </div>
+        </div>
+        <div class="row" style="padding-top:2%;">
+            <div class="col-4">
+                <div class="form-floating mb-3">
+                    <input type="user" class="form-control" [(ngModel)]="usuario" id="usuario" placeholder="Usuario123">
+                    <label for="floatingInput">Contraseña:</label>
+                  </div>
+            </div>
+            <div class="col-8">
+                <div class="form-floating mb-3">
+                    <input type="user" class="form-control" [(ngModel)]="usuario" id="usuario" placeholder="Usuario123">
+                    <label for="floatingInput">Direccion:</label>
+                  </div>
+            </div>
+        </div>
+        <div class="d-grid gap-2" style="padding-bottom: 2%;">
+            <button class="btn btn-primary" type="button" (click)="ingresarUsuario()">Registrar</button>
+        </div>  
+    </div>
+<app-footer></app-footer>>
+    
