@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Usuario } from 'src/app/modulos/usuario';
 import { ProductosService } from 'src/app/servicios/productos.service';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
@@ -12,6 +13,7 @@ export class PreviaIntercambioComponent implements OnInit {
 
   idusuario:string|null=null;
   numeroid:number=0;
+  usuarios:Usuario[]=[];
 
   constructor(private servicio:ProductosService, private route:ActivatedRoute,private serviciousuario:UsuariosService) { }
 
@@ -19,5 +21,4 @@ export class PreviaIntercambioComponent implements OnInit {
     this.idusuario=this.route.snapshot.paramMap.get('idusuario');
     this.numeroid = Number(this.idusuario);
   }
-  usuarios = this.serviciousuario.obtenerUsuarios();
 }
