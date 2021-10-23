@@ -9,6 +9,10 @@ a {
   }
 #Logo
 {
-    width: 12%;
-    height: 12%;
+    width: 75%;
+    height: 100%;
+}
+
+#links{
+	font-weight: bold;
 }

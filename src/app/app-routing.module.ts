@@ -14,6 +14,7 @@ import { CrearproductoComponent } from './Paginas/Generales/crearproducto/crearp
 import { AutenticacionGuard } from './guards/autenticacion.guard';
 import { IntercambioComponent } from './Paginas/Ventanas-Usuario/intercambio/intercambio.component';
 import { PreviaIntercambioComponent } from './Paginas/Generales/previa-intercambio/previa-intercambio.component';
+import { TodoslosproductosComponent } from './Paginas/Generales/todoslosproductos/todoslosproductos.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path: 'ventanaproductos/:idusuario' ,canActivate:[AutenticacionGuard],component: VentanaProductosComponent},
   {path: 'crearproducto/:idusuario',canActivate:[AutenticacionGuard], component:CrearproductoComponent },
   {path: 'intercambio/:idusuario',canActivate:[AutenticacionGuard],component:IntercambioComponent},
-  {path: 'previaintercambio/:idusuario',canActivate:[AutenticacionGuard],component:PreviaIntercambioComponent}
+  {path: 'previaintercambio/:idusuario',canActivate:[AutenticacionGuard],component:PreviaIntercambioComponent},
+  {path: 'todoslosproductos/:idusuario', canActivate:[AutenticacionGuard], component:TodoslosproductosComponent}
 ];
 
 @NgModule({

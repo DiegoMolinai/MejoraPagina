@@ -17,6 +17,7 @@ import { CrearproductoComponent } from './Paginas/Generales/crearproducto/crearp
 import { HttpClientModule } from '@angular/common/http';
 import { IntercambioComponent } from './Paginas/Ventanas-Usuario/intercambio/intercambio.component';
 import { PreviaIntercambioComponent } from './Paginas/Generales/previa-intercambio/previa-intercambio.component';
+import { TodoslosproductosComponent } from './Paginas/Generales/todoslosproductos/todoslosproductos.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PreviaIntercambioComponent } from './Paginas/Generales/previa-intercamb
     VentanaProductosComponent,
     CrearproductoComponent,
     IntercambioComponent,
-    PreviaIntercambioComponent
+    PreviaIntercambioComponent,
+    TodoslosproductosComponent
   ],
   imports: [
     BrowserModule,

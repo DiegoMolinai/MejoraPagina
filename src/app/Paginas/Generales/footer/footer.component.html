@@ -1,17 +1,7 @@
 <div class="container">
-    <!--                                    N O T A S   D E L   F O O T E R 
-        
-        Fondo: se cambia en la linea 1, está con el color que dejamos en el fidget spinner
-        sí o sí se tiene que cambiar ahí uwu
-        Links: están todos los textos, imagenes e iconos con links pero con <a href>, como despues vamos a tener que hacer el routing probablemente se tenga que cambiar
-        Tamaño: es literalmente un puro row con un col12, no deberia ver atado con ningún ancho, cuando tiene poco espacio se enlistan para abajo los icos, en el css están
-        los margenes y eso que puse en casi todas para que tenga bordes, si necesitan que sea de toda la pantalla no más borren el .container-fluid, igual lo de los links pueden 
-        dejarlo en cada href, pero cuentan hasta los iconos.
-            por cierto, no borren esto, siento que al final vamos a necesitar saber algo, cualquier cosa anoten aquí o en el discord pls tqm --> 
-
 <div class= 'row' style="text-align: center;" >
     <div class='col-4'>
-      <input type="image" src="https://cdn.discordapp.com/attachments/832023634171658311/836422706877431838/Logo_sin_fondo.png" id="saveForm" (click)="volver()" style="max-height: 100%; max-width: 100%;" />
+      <input type="image" src="https://cdn.discordapp.com/attachments/832023634171658311/836422706877431838/Logo_sin_fondo.png" id="Logo" (click)="volver()"/>
     </div>  
     <div class='col-4'>
         <br>
@@ -38,7 +28,7 @@
           </svg>
         </a>
     </div>  
-    <div class='col-4'>
+    <div class='col-4' id="links">
         <a href="*">¿Quiénes somos?</a><br>
         <a href="*">Soporte</a><br>
         <a href="*">Contacto</a>

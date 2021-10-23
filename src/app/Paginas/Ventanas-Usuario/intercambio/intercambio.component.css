@@ -1,11 +1,9 @@
-#contenedorprincipal
-{
+#contenedorprincipal{
     border: 5px solid black;
 }
 h1{
     /* 1 pixel black shadow to left, top, right and bottom */
     text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
-
     font-family: "comic-sans"; color: yellow;
 }
 .card{
@@ -13,9 +11,6 @@ h1{
     margin-top:1vh;
     margin-bottom: 1vh;
     background-color: rgba(255,255,255, 0,8);
-}
-#columnacentral{
-    margin-bottom: 1vh;
 }
 h5{
     font-size: 200%;
@@ -26,4 +21,18 @@ p{
 }
 .card-title{
     text-align: center;
+}
+#boton{
+    width: 45%;
+    height: 150%;
+    border: 3px solid black;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1%;
 }
