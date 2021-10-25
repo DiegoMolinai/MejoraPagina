@@ -1,13 +1,32 @@
 <app-header></app-header>
-<div class="container">
-    <div style="background-color:magenta;" id="contenedorprueba1">
-        <h1>EL MENU TODOS LOS PRODUCTOS SI FUNCIONA</h1>
+<div class="container-xxl">
+  <div class="item">
+    <section>
+      <h1>EL MENU TODOS LOS PRODUCTOS SI FUNCIONA</h1>
+    </section>
+  </div>
+  <div class="container">
+    <div class="container" id="interno">
+      <div class="item" *ngFor="let producto of productos">
         <div class="container">
-            <h2>awa</h2>
+          <div class="card" style="width: 18rem">
+            <img src="url({{producto.imagenes[0]}})" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{producto.nombre}}</h5>
+              <p class="card-text">
+                {{producto.descripcion}}
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">An item</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+            </div>
+          </div>
         </div>
     </div>
-    <div style="background-color:mediumspringgreen;" id="contenedorprueba2">
-        <h1>SEGUNDO CONTAINER DE TEST</h1>
     </div>
+  </div>
 </div>
 <app-footer></app-footer>

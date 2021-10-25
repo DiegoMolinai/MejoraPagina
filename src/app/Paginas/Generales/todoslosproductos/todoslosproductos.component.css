@@ -1,15 +1,23 @@
+.container-xxl{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    border: 5px solid black;
+}
 .container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 1%;
-    margin-top: 1%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: flex-start;
 }
-#contenedorprueba1,#contenedorprueba2{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+
+.item{
+    margin: 1%;
 }
-#contenedorprueba2{
-    width: 100%;
+
+*{
+    border-radius: 15px;
 }
